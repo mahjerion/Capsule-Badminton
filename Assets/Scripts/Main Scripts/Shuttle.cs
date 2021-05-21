@@ -208,7 +208,8 @@ public class Shuttle : MonoBehaviour
     {
         // Increments score of player who last hit it if shuttle is in, or the other player if it was out
         if (collision.transform.CompareTag("In") || (collision.transform.CompareTag("BotCollision")))
-        {
+            {
+            GetComponent<TrailRenderer>().Clear();
             if (Points.gameStart)
             {
                 Points.landedIn = true;
@@ -219,6 +220,7 @@ public class Shuttle : MonoBehaviour
         }
         else if (collision.transform.CompareTag("In2") || (collision.transform.CompareTag("PlayerCollision")))
         {
+            GetComponent<TrailRenderer>().Clear();
             if (Points.gameStart)
             {
                 Points.landedIn2 = true;
@@ -229,6 +231,7 @@ public class Shuttle : MonoBehaviour
         }
         else if (collision.transform.CompareTag("Out"))
         {
+            GetComponent<TrailRenderer>().Clear();
             if (Points.gameStart)
             {
                 Points.landedOut = true;
@@ -236,6 +239,7 @@ public class Shuttle : MonoBehaviour
             DisableEverything();
             TrainingS.landed = 2;
             ResetShuttle.landed = true;
+
         }
     }
 

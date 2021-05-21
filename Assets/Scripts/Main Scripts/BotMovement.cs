@@ -95,15 +95,15 @@ public class BotMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (NetworkController.networkMode)
-        {
-            player = ReInput.players.GetPlayer(0);
-        }
-        else
-        {
+        //if (NetworkController.networkMode)
+        //{
+        //    player = ReInput.players.GetPlayer(0);
+        //}
+        //else
+        //{
             // rewired init
             player = ReInput.players.GetPlayer(1);
-        }
+        //}
 
         // Initialize and get component for players
         strokePossible = 0;
@@ -863,8 +863,8 @@ public class BotMovement : MonoBehaviour
         if (strokeState == 0 && shuttle.position.y > 3.5f && currentShot == shotManager.drive)
         {
             racquetSound.clip = smashSound;
-            racquetSound.volume = 1f;
-            racquetSound.pitch = 0.9f;
+            racquetSound.volume = 1.1f;
+            racquetSound.pitch = 0.95f;
         }
         else if (strokeState == 0 && shuttle.position.y > 3.5f && currentShot == shotManager.drop)
         {
@@ -966,7 +966,7 @@ public class BotMovement : MonoBehaviour
         }
         else
         {
-            return 1f;
+            return 0.8f;
         }
     }
 

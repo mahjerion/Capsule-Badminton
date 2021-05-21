@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: d556e7950d95c9f44a079aad312868aa,
     type: 2}
   m_UseShadowmask: 1
@@ -205,6 +206,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -315,6 +317,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.7176471}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -353,7 +356,7 @@ GameObject:
   m_TagString: Out
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &126872961
 Transform:
@@ -396,6 +399,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -445,7 +449,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!64 &128682961
 MeshCollider:
@@ -457,9 +461,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &128682962
 MeshRenderer:
@@ -475,6 +479,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -538,7 +543,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &141418699
 Transform:
@@ -564,9 +569,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &141418701
 MeshRenderer:
@@ -582,6 +587,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -631,7 +637,7 @@ GameObject:
   m_TagString: Out
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &167860506
 Transform:
@@ -674,6 +680,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -721,7 +728,7 @@ GameObject:
   m_TagString: Out
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &193191536
 Transform:
@@ -817,7 +824,7 @@ MonoBehaviour:
   openReferences: 0
   openPrefabs: 0
   idRef:
-    _Keys: 8e8d33b5b1cc2d4f3bef0a59cbd615566dae28135ddbba299704361b3d13fc298462492ce638412155836d83ba32917039724cafcae37269b9a3b349fdb77227f4e0d6698de870346d07bfd96d366e6373c655af5fabf3662b4d8bbc7b08dc62efb96f26a3d71d22e2801bd1a24cd77d3550d63761c2c748ee6f94da742caf74e421c827a695074ae47792e0c6c509218bf20e3420eb3b4e81b813126bf8960f2f90b5c415ff24604a8c54ea30e781279a8caf7de184ab08198556a157e54924f25ef0a88431c976e991146b68afe168c7c48721b7e7d2551c525470577cf62f2987227128d65369c33994506f409f695d1298e4929423263045c3d78539cd66884342e18c70406318f1e4f07b22c55bf3be1345e4129c4155b6bf1ded841c766b2ec82bfdbedd33ad03335e4fcc5553f6e136bcb2ecb565e08336432f5d506c2a91a355150fa64f9c46f2e746fb9121f3edd8f3b2a03c57e42d4b7a889a034f4e39cc41d700c2048886206cf9ce1e24eba8b0be7aa24575acb38e173cd338354b419a0d2e504a0b512284c73f57ae4d4c6f64304ac2c9550ca86adc8e55374bb215de48cbee0a655ea56e571e7e3554064163ac3868800cf410e62845d8665aa53086abca09e65e9b007210cfde8b74debee1cfb9e3831a6b14ab44f81de0360cc8fd4f04e01f0e28c21137f6703d2d65a5b67808685f3e5494ea204bd4a97c213b0407e13c6f40ddeff77bf5bb110528811fac9898d25d69bffc70f6fec352199417ba6b354b27367556f85fdb330e5a0fb7330ba9ea470e619e2240ff4a23b249938ad2cb715ecc47e20eeecabc72741234f94909a13e805eac0a9729e7352c32aaa96fbde1719e5967c3c7dc58271f11965234436d5658aaf6ce87840a092f1739217566e2310d5aa40f5e21885c482b14796d6afe183babae3b38ed1622637094afa336b27af4c845da9f5ef835239a17b39884763b1920e6c9b8a7f8068f388c3149c80012876692ca4f2748665c1ca22dfb364417e7cf95824fe8c2653eb4962815d6801565d6d3cd0e53144097b2da2bb6d9fe3a845bb685cd813d6f29f80903bd707b329db792d10a11266bba551802c3ed1b184e2f548f72fa1d18edbc0af9a2e7022537a88ffe472d3071364a40239a403316ecdd4971e313405d9b7ae54d072cc95da9c1c69483e59f1f011ca6d8460582548af4e5803074094ae9ec64cd48e26a0882e27ad9799e922e7d6970c66d68175ffd39c41346482c34b97cac9681d2d71c87ae5928805bcd1562b7fe9ae4cfb75005c3d00f1d57c1394ab9df020d035250c072c041f1102157f9254e70b56db017c55b92bd01c7fe21906d22388435f765f6b1258df089a00ca3790843a532ef2208c8c768961051088b614d7b11172c2ee34c85fbb8ddd94efc9f1a88bebb7c5d7fff404cfd60fb1a5f1d018f3b24fb46a6376159acf3691aa21664352bdac747ddaaf91157782b7e516b5ad6df698a20659e1c78a6dc4f759726ee13c531457baa454d6fd515111d9c20f7bf676cc40ba085d08cbd4ea000a57b588198c0bc1fd920d366e3e5b47a50c5237a1a6ff10215054cb5fd2ec70819b135a6436f7a5d24e91ab867a1d84430a9247d8ee5e5348a56969e0d711c5558cb4c32af0e36404180563154399a49236e1a58acbb6901966a309a06196a4ecdc51132ed0af43de1643d0d8eb3df5044b28461a93b5714cbb264ba2163c559eba4648f27685b18852288b881a38d4ab67faaac6af75a081e26683ba53a1b7da0e322e94f502953f26323794c606c6ebf50fb5d47e6110c4a5c7201ff20733fc2faa89a39886565a9a945f82c1e44424606050ac9873b7a0ad0600d21d7ac2e0f1b48ad482dcb484b9f4c625fe71f68a1b44706257d09483623a50ae872862dfd17e910d696f918c643ab972c62250e11375229e04dac722591e36cd2d53128191e5f76d02f3e37519fbf1e2d8de32c0169054edfa2b24ac35bea44b38d45658a2c81f2fd51c11ffa1a7b800cca9f67aeb76b69cfe24944d2aa3a2c1982ea3ba7a56cfef30fd14f5919b706e1cda87205ae6904de236a581ec33c587411c776303fd9665da1734278443d1765b0d904fd37d794e619a27d3c14e12fd279db465241d6a1f34114633b268c99e553f26ceb3755ace95b5c481da8d4b640bc8f0196093adc26c8ef3f4c3acf0ca63b6318de8bba65dcd0a20a1b714163ea355c084971d01171306c4d2895f8242b69ef1ebb44274afed5da396630c0b4878b541722393ccb94ae5952e292738e3738ca7a615f1e2e5ca6061f4c09aa4170b7c54deb0f03f22d248a0cebd4696b614c0260fa3b53276d26ba38bfa4e861a7653d6659c1a32735d84d7a17d5e6cef08d7f66f4f4b9cb9b621f10cb3bb1d10cecb35013cf139fa8da2a2c88ce3d430c89284d234f559b1e080209a3935dfa267b6d2a2396bc2079dfbe18ca8c536a9f621c5364fff55c414f6f1a2de202ea82cff9043c6765a24549c603f3919a54a493564089f569d879ee172cd85db2a31e57646679a859f837406753c6f86aafb41a753f3842618d66208a4db0c6361869dd1b4909ff31b312b1884872e9618ea6381e0cd3f16bdbf5d700591d0ca7fe767fbc17de21b9b44b29527846e601b07de70b7658d614a5b709c132ffd896060989d10ea678b0857e6ac10343e421dcd8b0d604181ea6a06b175f191d134cdc40a77d30b90f0a053685f73d971761d3e7e55a4f0191eeeae330a343d9caa392b69d43639a0f6b184523c46216e30954b58c3238b8fddaafb8924d164db2d3941d9a79345ac46cf650729525aaaf2cffd8b17264fddb4bb377f21c2ca37d9a0708a6807c69d4f9f01f3be746994aa69740b31001253890f9e52dac4d2067ad2c2872e35030a868acaa6384383c6ee4d2b37b14578e9ce1d01586963bd954ef7817eb9125675668984a645776bcc9bd7749da996583fb453bab4b994ac15b2baa8cf4de2801f6c6f51c525e0df358134cc91ef14d11aa03edcf332e4df0b259a68f010337166b87c05e707e29a7adb8adc8b37f5d9722671e0f0ea63425140669f8b87d0aa4b49ecb5a4e537ed7d26c831324ea3c34fc0f6c9ae427063bad64b596ebcf1130ae091314b30348d0e8473ca2232000d635c90357ef8f407267f8f84df7eb3da37e53651bd7277f0638624e63149c5e339b209fdd34451ec1b6798353046a39d4859a24cfbbe4525d48fd1f8c41dd5e3566d417e775e46dc7cad82eae552c0232d6dd17503ed176b7cefc263164ab7f28e44846267dde5e5ed313656becfe071bfa51631ff4af0a6ba19ee68641c32c765855939d72294b07808adbadc81d5dcd03422cb50f9f1c6cad4e37e33b1a1cf11810ed699495562ffaa460952ca25c7cbe4d757b101d7a088dd810db0e97339b92343a27f439376febfdba6b3e866750aab3a28890981ffb96e5dbbc857b209c8f39fd0797ca797aeaf86fed9cf03708716085c139bb2ad4abc06ef0a2841770dd57fa78846f47df3a279e97293268881dd44a25f55e29b69bd7a428a4772765e0dfcaf4ebaf7c031965fb615ac15487a80af28930c27a7f2e45dcaccb1e7b4eb0c749b6988b72cd51480c8f63c75adb821d809a859e695da6b7ddce74d6370515524e6d8761121d972537e8b6ea1a9915fdd552611e37125dec10e1aea3587c1111a5b516c8611bd09cfd9f987f59bc9c76e472ab895c09e59f358b8e0c6ef5cdbcd7a5446550dd5fb982c521985523b9abbac8401a3088b49dcf7693d55524f50e92aaa901763726c1d1650b22297ef5584539c736341813b00f586a2670cbf05a45d0d5ff3346dd0e11fd146a7b927352813a901c5b41265541a6ef305eb3cdf98b4e22a6570adb00a347dac82c83d35e344358543ad5fe86f62a41d935f1923b35f20a354be55674e96f405c675d28c4794e64a20c22335f4ca99d814cb435b1b49f933a730aaa1a9acd3ea9145cee545205538373ef2e12beabe8a1482cd8cbc671583735ed5183f87e3cd960dd73a897f1d45208b924c570807cc70d4c626ef473e3a202b71f4057d67cf14c55b2e03840095600d52c8069e2574a71778abb1e54312c3e15aa4e1014a9df35eaeee53164703254ba6fca9f640be50e6ab2e04cc0d3f878de1f2295bb45eb2cb3b4ad2fc2842905a7999b1a9872262170a3853875d409150993f07c6d37ef00a508134fa249b41b77250ba691ecee6bf801055fcb23a2215568c6aa8b5a8c70a99a75905fd67f46a75e50641f4f581d5c7b7c94ce6fcb7e66f1fa39820a8f1c989bfdf7775e0c2281bfb76dd33d02050fa90506d6203e189b0bd69224ba3c62cf33cc835261a6467860ea72d8c7ad29eff52ad9058846775de49182349e473c04e5615f8f814d52fd417189c934bf6147007ee51aea974613aad9912fdced2619ad76be290db870be832ab90530bf6ea3f33b34206121117ea84de4a7bc221facb45d8955827439480da29e14514b1deb6a352217224648759bc42ea563e7019ff59a4572b73c217e01ec12be83fd31f46af93d86000831055a020fb95d2154f4a3fe1fb605aa5e59a85fe6f1a6f80899f63a3a69aa7a600334b53246b4242422411e1a85de7a06eba869d0a011dd54540a76c322e6eb611e5e21ebbbdda40d337c3c4f77217d7672402611134a0013eef520c4c29efe082c7ffc26bc8f4a0efda3fce2b2d333317200ae1d3f25b2695f34fcc5bce04b2e7c457cf71ea333008c3414704d1d603e295252c1f0e0c907cc93c7879285512310d49892a9c3ec1634aea9743a22b77d6bc464957176c15b0f83c4b16bbb931179c77fdd490c18659bc472bec8aa335524b50da816186a796b0b5fd378617e10be45058d5c26cc77dec9fbad03029363506e8eb6adebfa6dce07b7aa93132239ba9dfe7d5b590603e996ca4c1dbc756787037cf62c389d2eb56740ab90dd1c36583e985efeee41567591cd1721ae5011935032978f18667e00d0c8f3185b723ab300a45b54d36567c2256abe06b54f63b8513de00fb3c570a4165e2d264e3d2ffbf89adff50b43411534a64a7dda7b4a7f9bc439e26ed56639ebff94cd6c727319c53df2e58f9153f2033425f2840c369a13acc11377126a33fe5af5f4518c57c2326242186d2f100a7147de39b07442f835fab9c0b0607028584019ca63a05f892318db18b1b12ce49bcb85bef1a47e75e812d6b4b9e8112f0ee63fd2eab96ded5897a237b0a44683cdd524e4dbb1374d3d5b1dae355430c6f9f5d9680e0031abc6689aa6feb83abd34ad181c3cd30940e20c6b71644022533797cf5982506d32f83054bcb3224d7adf9f8677c4eb7626ec194b1a6ba30f088a476f66e8e13ae53fe7230b7f4d0bfba60f6e3a455416dcf1569296faac3aaadeb3ce934c1963c0d96ab7ab0f825960f2af8ba3cb2b3dcaceb4a7c08c2e20ed21ceea321b9f47c0732e14af0cc1339203ce5bb4de6920b37504c59871a233ab49a3ccde6d8b7c6e09b5e906c012297118c63ba4752a0db8ad9da81f65df31e99d40075072ee0171b41154d67fe573882e35b038ded8218d4e7c74f5cc6307d67c2d5cffe5851d07c8ad59877fe4376ceecfb26570960ac41e939eee62f63de8e681a5ad768b5c58e748ff73cd570c96ba1f1c64e993661bdd681fad19d169c0eb72a0fd3f891c86d3f6b34769816d769f083343dad92e7ae78ad00e6caf3e17df40885bb70e2a443ba138e046ad4fa40469b2defb5366c5a12615b4b90e19db486398d607ed2eae33ef0738a04e3f96d97412d5621c1133a6c4b991f97602b644a3681dea8763e9c4fc55f4b4d2650f997f25ba04bc3d9b8a358334584058aaf1bd7d43b75d5453112a1165c61d7e2ca036d487634345ff1f326c4afcd16f7b5bff1a8eaf57583c2a78cb2ecda32b93484f2a71eb2046538881db7b0ff64e1d66723e39c7f27c49dd985ceb77173185f926fd5359026f3bb96c173132d34be0385138a59a0d3356d3e19452c45b365f4da87e1707047668e202805adb4b16094c3b24c94fd616140cacd9c5693e765e36b7e48a553318c2375f786272717a87ca8a0588366d108a6e95f5a4d44e015d73dedbdc99734ce7dd9d6e0fa24b5e9b3151fadf38ee273758920714d742698660d4d6504d57213dd6ec66d4db2019ddc86f2adab61f6b6305a583066b370f65cb0a8f88de514d27d043f7b477ac127aabe5dc466d432fc096c7a90d24d756f203fff62f6f6f00772251aaf9171f1559920a5b865bc92cf1c5b0e05a05a501f9ec06b078b6e30ac31bab964111d7294922af85e6833069c52df9964171597cc852a2e61dd08e5daf001ea206606d029dda2a7db42ae77be28f8a5a4f85b451c12eceee6ef00b79945133e6a2d270256603cde36329ce0dc6e1fc71b9ccf2344b8f9ccad1a38e721a5ceef9a131e210e19b40acac674a15fddcb450ed7d3360bc9864edca59ab086dc0013fe8375108c50d901e8b46874c274d330a10c17b62288eb53996cfda78f037196c698afd397654eb05f1ad1375efe83983d95f072f3b6417598217726c18f6d1acd3e51c6351f995bbd67570295ed5b5516aa9604fc0b758325ea8447338a8e217803fb70a35292b2c0a3cfa4f2bbe48a8323b293e5720ec1b8dea0507c2f60b80a87755628ebf1d407d3444030bfc84b5d6653a1d5132c58e79a70c20b11d0be3cd1a3022139ec2efee0c567bf8016de51997896e2eee86ad4b6e2207508f72b586598c0e359e5dc75cb4d05d77be6988c6d9f9495985ee445e21917ec0c93f7e7f0c0261765eb17a39c11278bdcb1c22ebe5d754bff3c49d99753116bc4bbb3567a9ec0705fbbb7b9ede034367b74c6061bb1039f48509a1f9f42508e41d168710bf256548dbe10fd5a44a200f7efaaf3e6e8700c67ed6134d72fe0f2a4d677e3784cd27ddb21786d9016468d029b078efd44652a616c292e8121844270e1a77c3331774b0d3d18b56002639e43f4323c18620006c45dcb1b9a0f010cb5cade71bdb2c64edc3d73d592d565ac2045156310a7c5f12e6f481a89a4550c4e2c0fa533e1d419457ee7aa2a2a5679d3673bdf147423fdf4dd535e7aabb538279878993a3f97ce60fc2d91c02bc70408d1edf0d03410bdcffe5fa9618a6159b9afc1c292ffa063ef6a400091c5b229164f55a8bdc467bbc92ae93bdfee601b6d83e81059f471192171c04a7421541a5c38bfb0d00a141ac7f274322713b3f11a3b7e25add280e1de4c773c041d301a9efeffa72eaf3497a7f2c85c78a3404535b144af9f79b396582e60d38eafe1253299b338140cc25b16d5cd90aadd66db0c320642d8807608b285ff5d101817080e5270fd9977a6c283afb675474431259535d74c99ae524cf0456a71f28ac501313a6db7a386c483d8c3bf38d9f0b016d724e255ef639190fd04fcd9936f33f655047e4c40dc964e5e5e04c5cbfc648af620c63f6ffb4181e815848ce55413e909e6925e129aa141ae1654ee2bd793198971f36299048659d2e024665113370f1352ab911a4a43e6312318d82e60b07917ed12ccb88af6f91b0baa7371a5e120a5f7127433efa36cf2028a9d465eb3cedecdee025add379e5992960e9fd07484ce1681ea7cdb453839b5caa60059a099df6ba4a3b7dec48ce15f42298a5df32d42a11882ef15b4362ad74e986057f2e9d6e2ed68cf6635bb9ce33683128124c61f133aae9a9c043b3657a52c0aab640b893337fbb3b2613
+    _Keys: 8e8d33b5b1cc2d4f3bef0a59cbd615566dae28135ddbba299704361b3d13fc298462492ce638412155836d83ba32917039724cafcae37269b9a3b349fdb77227f4e0d6698de870346d07bfd96d366e6373c655af5fabf3662b4d8bbc7b08dc62efb96f26a3d71d22e2801bd1a24cd77d3550d63761c2c748ee6f94da742caf74e421c827a695074ae47792e0c6c509218bf20e3420eb3b4e81b813126bf8960f2f90b5c415ff24604a8c54ea30e781279a8caf7de184ab08198556a157e54924f25ef0a88431c976e991146b68afe168c7c48721b7e7d2551c525470577cf62f2987227128d65369c33994506f409f695d1298e4929423263045c3d78539cd66884342e18c70406318f1e4f07b22c55bf3be1345e4129c4155b6bf1ded841c766b2ec82bfdbedd33ad03335e4fcc5553f6e136bcb2ecb565e08336432f5d506c2a91a355150fa64f9c46f2e746fb9121f3edd8f3b2a03c57e42d4b7a889a034f4e39cc41d700c2048886206cf9ce1e24eba8b0be7aa24575acb38e173cd338354b419a0d2e504a0b512284c73f57ae4d4c6f64304ac2c9550ca86adc8e55374bb215de48cbee0a655ea56e571e7e3554064163ac3868800cf410e62845d8665aa53086abca09e65e9b007210cfde8b74debee1cfb9e3831a6b14ab44f81de0360cc8fd4f04e01f0e28c21137f6703d2d65a5b67808685f3e5494ea204bd4a97c213b0407e13c6f40ddeff77bf5bb110528811fac9898d25d69bffc70f6fec352199417ba6b354b27367556f85fdb330e5a0fb7330ba9ea470e619e2240ff4a23b249938ad2cb715ecc47e20eeecabc72741234f94909a13e805eac0a9729e7352c32aaa96fbde1719e5967c3c7dc58271f11965234436d5658aaf6ce87840a092f1739217566e2310d5aa40f5e21885c482b14796d6afe183babae3b38ed1622637094afa336b27af4c845da9f5ef835239a17b39884763b1920e6c9b8a7f8068f388c3149c80012876692ca4f2748665c1ca22dfb364417e7cf95824fe8c2653eb4962815d6801565d6d3cd0e53144097b2da2bb6d9fe3a845bb685cd813d6f29f80903bd707b329db792d10a11266bba551802c3ed1b184e2f548f72fa1d18edbc0af9a2e7022537a88ffe472d3071364a40239a403316ecdd4971e313405d9b7ae54d072cc95da9c1c69483e59f1f011ca6d8460582548af4e5803074094ae9ec64cd48e26a0882e27ad9799e922e7d6970c66d68175ffd39c41346482c34b97cac9681d2d71c87ae5928805bcd1562b7fe9ae4cfb75005c3d00f1d57c1394ab9df020d035250c072c041f1102157f9254e70b56db017c55b92bd01c7fe21906d22388435f765f6b1258df089a00ca3790843a532ef2208c8c768961051088b614d7b11172c2ee34c85fbb8ddd94efc9f1a88bebb7c5d7fff404cfd60fb1a5f1d018f3b24fb46a6376159acf3691aa21664352bdac747ddaaf91157782b7e516b5ad6df698a20659e1c78a6dc4f759726ee13c531457baa454d6fd515111d9c20f7bf676cc40ba085d08cbd4ea000a57b588198c0bc1fd920d366e3e5b47a50c5237a1a6ff10215054cb5fd2ec70819b135a6436f7a5d24e91ab867a1d84430a9247d8ee5e5348a56969e0d711c5558cb4c32af0e36404180563154399a49236e1a58acbb6901966a309a06196a4ecdc51132ed0af43de1643d0d8eb3df5044b28461a93b5714cbb264ba2163c559eba4648f27685b18852288b881a38d4ab67faaac6af75a081e26683ba53a1b7da0e322e94f502953f26323794c606c6ebf50fb5d47e6110c4a5c7201ff20733fc2faa89a39886565a9a945f82c1e44424606050ac9873b7a0ad0600d21d7ac2e0f1b48ad482dcb484b9f4c625fe71f68a1b44706257d09483623a50ae872862dfd17e910d696f918c643ab972c62250e11375229e04dac722591e36cd2d53128191e5f76d02f3e37519fbf1e2d8de32c0169054edfa2b24ac35bea44b38d45658a2c81f2fd51c11ffa1a7b800cca9f67aeb76b69cfe24944d2aa3a2c1982ea3ba7a56cfef30fd14f5919b706e1cda87205ae6904de236a581ec33c587411c776303fd9665da1734278443d1765b0d904fd37d794e619a27d3c14e12fd279db465241d6a1f34114633b268c99e553f26ceb3755ace95b5c481da8d4b640bc8f0196093adc26c8ef3f4c3acf0ca63b6318de8bba65dcd0a20a1b714163ea355c084971d01171306c4d2895f8242b69ef1ebb44274afed5da396630c0b4878b541722393ccb94ae5952e292738e3738ca7a615f1e2e5ca6061f4c09aa4170b7c54deb0f03f22d248a0cebd4696b614c0260fa3b53276d26ba38bfa4e861a7653d6659c1a32735d84d7a17d5e6cef08d7f66f4f4b9cb9b621f10cb3bb1d10cecb35013cf139fa8da2a2c88ce3d430c89284d234f559b1e080209a3935dfa267b6d2a2396bc2079dfbe18ca8c536a9f621c5364fff55c414f6f1a2de202ea82cff9043c6765a24549c603f3919a54a493564089f569d879ee172cd85db2a31e57646679a859f837406753c6f86aafb41a753f3842618d66208a4db0c6361869dd1b4909ff31b312b1884872e9618ea6381e0cd3f16bdbf5d700591d0ca7fe767fbc17de21b9b44b29527846e601b07de70b7658d614a5b709c132ffd896060989d10ea678b0857e6ac10343e421dcd8b0d604181ea6a06b175f191d134cdc40a77d30b90f0a053685f73d971761d3e7e55a4f0191eeeae330a343d9caa392b69d43639a0f6b184523c46216e30954b58c3238b8fddaafb8924d164db2d3941d9a79345ac46cf650729525aaaf2cffd8b17264fddb4bb377f21c2ca37d9a0708a6807c69d4f9f01f3be746994aa69740b31001253890f9e52dac4d2067ad2c2872e35030a868acaa6384383c6ee4d2b37b14578e9ce1d01586963bd954ef7817eb9125675668984a645776bcc9bd7749da996583fb453bab4b994ac15b2baa8cf4de2801f6c6f51c525e0df358134cc91ef14d11aa03edcf332e4df0b259a68f010337166b87c05e707e29a7adb8adc8b37f5d9722671e0f0ea63425140669f8b87d0aa4b49ecb5a4e537ed7d26c831324ea3c34fc0f6c9ae427063bad64b596ebcf1130ae091314b30348d0e8473ca2232000d635c90357ef8f407267f8f84df7eb3da37e53651bd7277f0638624e63149c5e339b209fdd34451ec1b6798353046a39d4859a24cfbbe4525d48fd1f8c41dd5e3566d417e775e46dc7cad82eae552c0232d6dd17503ed176b7cefc263164ab7f28e44846267dde5e5ed313656becfe071bfa51631ff4af0a6ba19ee68641c32c765855939d72294b07808adbadc81d5dcd03422cb50f9f1c6cad4e37e33b1a1cf11810ed699495562ffaa460952ca25c7cbe4d757b101d7a088dd810db0e97339b92343a27f439376febfdba6b3e866750aab3a28890981ffb96e5dbbc857b209c8f39fd0797ca797aeaf86fed9cf03708716085c139bb2ad4abc06ef0a2841770dd57fa78846f47df3a279e97293268881dd44a25f55e29b69bd7a428a4772765e0dfcaf4ebaf7c031965fb615ac15487a80af28930c27a7f2e45dcaccb1e7b4eb0c749b6988b72cd51480c8f63c75adb821d809a859e695da6b7ddce74d6370515524e6d8761121d972537e8b6ea1a9915fdd552611e37125dec10e1aea3587c1111a5b516c8611bd09cfd9f987f59bc9c76e472ab895c09e59f358b8e0c6ef5cdbcd7a5446550dd5fb982c521985523b9abbac8401a3088b49dcf7693d55524f50e92aaa901763726c1d1650b22297ef5584539c736341813b00f586a2670cbf05a45d0d5ff3346dd0e11fd146a7b927352813a901c5b41265541a6ef305eb3cdf98b4e22a6570adb00a347dac82c83d35e344358543ad5fe86f62a41d935f1923b35f20a354be55674e96f405c675d28c4794e64a20c22335f4ca99d814cb435b1b49f933a730aaa1a9acd3ea9145cee545205538373ef2e12beabe8a1482cd8cbc671583735ed5183f87e3cd960dd73a897f1d45208b924c570807cc70d4c626ef473e3a202b71f4057d67cf14c55b2e03840095600d52c8069e2574a71778abb1e54312c3e15aa4e1014a9df35eaeee53164703254ba6fca9f640be50e6ab2e04cc0d3f878de1f2295bb45eb2cb3b4ad2fc2842905a7999b1a9872262170a3853875d409150993f07c6d37ef00a508134fa249b41b77250ba691ecee6bf801055fcb23a2215568c6aa8b5a8c70a99a75905fd67f46a75e50641f4f581d5c7b7c94ce6fcb7e66f1fa39820a8f1c989bfdf7775e0c2281bfb76dd33d02050fa90506d6203e189b0bd69224ba3c62cf33cc835261a6467860ea72d8c7ad29eff52ad9058846775de49182349e473c04e5615f8f814d52fd417189c934bf6147007ee51aea974613aad9912fdced2619ad76be290db870be832ab90530bf6ea3f33b34206121117ea84de4a7bc221facb45d8955827439480da29e14514b1deb6a352217224648759bc42ea563e7019ff59a4572b73c217e01ec12be83fd31f46af93d86000831055a020fb95d2154f4a3fe1fb605aa5e59a85fe6f1a6f80899f63a3a69aa7a600334b53246b4242422411e1a85de7a06eba869d0a011dd54540a76c322e6eb611e5e21ebbbdda40d337c3c4f77217d7672402611134a0013eef520c4c29efe082c7ffc26bc8f4a0efda3fce2b2d333317200ae1d3f25b2695f34fcc5bce04b2e7c457cf71ea333008c3414704d1d603e295252c1f0e0c907cc93c7879285512310d49892a9c3ec1634aea9743a22b77d6bc464957176c15b0f83c4b16bbb931179c77fdd490c18659bc472bec8aa335524b50da816186a796b0b5fd378617e10be45058d5c26cc77dec9fbad03029363506e8eb6adebfa6dce07b7aa93132239ba9dfe7d5b590603e996ca4c1dbc756787037cf62c389d2eb56740ab90dd1c36583e985efeee41567591cd1721ae5011935032978f18667e00d0c8f3185b723ab300a45b54d36567c2256abe06b54f63b8513de00fb3c570a4165e2d264e3d2ffbf89adff50b43411534a64a7dda7b4a7f9bc439e26ed56639ebff94cd6c727319c53df2e58f9153f2033425f2840c369a13acc11377126a33fe5af5f4518c57c2326242186d2f100a7147de39b07442f835fab9c0b0607028584019ca63a05f892318db18b1b12ce49bcb85bef1a47e75e812d6b4b9e8112f0ee63fd2eab96ded5897a237b0a44683cdd524e4dbb1374d3d5b1dae355430c6f9f5d9680e0031abc6689aa6feb83abd34ad181c3cd30940e20c6b71644022533797cf5982506d32f83054bcb3224d7adf9f8677c4eb7626ec194b1a6ba30f088a476f66e8e13ae53fe7230b7f4d0bfba60f6e3a455416dcf1569296faac3aaadeb3ce934c1963c0d96ab7ab0f825960f2af8ba3cb2b3dcaceb4a7c08c2e20ed21ceea321b9f47c0732e14af0cc1339203ce5bb4de6920b37504c59871a233ab49a3ccde6d8b7c6e09b5e906c012297118c63ba4752a0db8ad9da81f65df31e99d40075072ee0171b41154d67fe573882e35b038ded8218d4e7c74f5cc6307d67c2d5cffe5851d07c8ad59877fe4376ceecfb26570960ac41e939eee62f63de8e681a5ad768b5c58e748ff73cd570c96ba1f1c64e993661bdd681fad19d169c0eb72a0fd3f891c86d3f6b34769816d769f083343dad92e7ae78ad00e6caf3e17df40885bb70e2a443ba138e046ad4fa40469b2defb5366c5a12615b4b90e19db486398d607ed2eae33ef0738a04e3f96d97412d5621c1133a6c4b991f97602b644a3681dea8763e9c4fc55f4b4d2650f997f25ba04bc3d9b8a358334584058aaf1bd7d43b75d5453112a1165c61d7e2ca036d487634345ff1f326c4afcd16f7b5bff1a8eaf57583c2a78cb2ecda32b93484f2a71eb2046538881db7b0ff64e1d66723e39c7f27c49dd985ceb77173185f926fd5359026f3bb96c173132d34be0385138a59a0d3356d3e19452c45b365f4da87e1707047668e202805adb4b16094c3b24c94fd616140cacd9c5693e765e36b7e48a553318c2375f786272717a87ca8a0588366d108a6e95f5a4d44e015d73dedbdc99734ce7dd9d6e0fa24b5e9b3151fadf38ee273758920714d742698660d4d6504d57213dd6ec66d4db2019ddc86f2adab61f6b6305a583066b370f65cb0a8f88de514d27d043f7b477ac127aabe5dc466d432fc096c7a90d24d756f203fff62f6f6f00772251aaf9171f1559920a5b865bc92cf1c5b0e05a05a501f9ec06b078b6e30ac31bab964111d7294922af85e6833069c52df9964171597cc852a2e61dd08e5daf001ea206606d029dda2a7db42ae77be28f8a5a4f85b451c12eceee6ef00b79945133e6a2d270256603cde36329ce0dc6e1fc71b9ccf2344b8f9ccad1a38e721a5ceef9a131e210e19b40acac674a15fddcb450ed7d3360bc9864edca59ab086dc0013fe8375108c50d901e8b46874c274d330a10c17b62288eb53996cfda78f037196c698afd397654eb05f1ad1375efe83983d95f072f3b6417598217726c18f6d1acd3e51c6351f995bbd67570295ed5b5516aa9604fc0b758325ea8447338a8e217803fb70a35292b2c0a3cfa4f2bbe48a8323b293e5720ec1b8dea0507c2f60b80a87755628ebf1d407d3444030bfc84b5d6653a1d5132c58e79a70c20b11d0be3cd1a3022139ec2efee0c567bf8016de51997896e2eee86ad4b6e2207508f72b586598c0e359e5dc75cb4d05d77be6988c6d9f9495985ee445e21917ec0c93f7e7f0c0261765eb17a39c11278bdcb1c22ebe5d754bff3c49d99753116bc4bbb3567a9ec0705fbbb7b9ede034367b74c6061bb1039f48509a1f9f42508e41d168710bf256548dbe10fd5a44a200f7efaaf3e6e8700c67ed6134d72fe0f2a4d677e3784cd27ddb21786d9016468d029b078efd44652a616c292e8121844270e1a77c3331774b0d3d18b56002639e43f4323c18620006c45dcb1b9a0f010cb5cade71bdb2c64edc3d73d592d565ac2045156310a7c5f12e6f481a89a4550c4e2c0fa533e1d419457ee7aa2a2a5679d3673bdf147423fdf4dd535e7aabb538279878993a3f97ce60fc2d91c02bc70408d1edf0d03410bdcffe5fa9618a6159b9afc1c292ffa063ef6a400091c5b229164f55a8bdc467bbc92ae93bdfee601b6d83e81059f471192171c04a7421541a5c38bfb0d00a141ac7f274322713b3f11a3b7e25add280e1de4c773c041d301a9efeffa72eaf3497a7f2c85c78a3404535b144af9f79b396582e60d38eafe1253299b338140cc25b16d5cd90aadd66db0c320642d8807608b285ff5d101817080e5270fd9977a6c283afb675474431259535d74c99ae524cf0456a71f28ac501313a6db7a386c483d8c3bf38d9f0b016d724e255ef639190fd04fcd9936f33f655047e4c40dc964e5e5e04c5cbfc648af620c63f6ffb4181e815848ce55413e909e6925e129aa141ae1654ee2bd793198971f36299048659d2e024665113370f1352ab911a4a43e6312318d82e60b07917ed12ccb88af6f91b0baa7371a5e120a5f7127433efa36cf2028a9d465eb3cedecdee025add379e5992960e9fd07484ce1681ea7cdb453839b5caa60059a099df6ba4a3b7dec48ce15f42298a5df32d42a11882ef15b4362ad74e986057f2e9d6e2ed68cf6635bb9ce33683128124c61f133aae9a9c043b3657a52c0aab640b893337fbb3b2613cebac615a6969c05523ce04bdcb2494b7561a9a58e3246193428c174a0e4556981f09447652a5707
     _Values:
     - {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
     - {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
@@ -1507,6 +1514,11 @@ MonoBehaviour:
     - {fileID: 1848827932}
     - {fileID: 0}
     - {fileID: 7400000, guid: 35950eb53069cf64c8a49744b33010da, type: 2}
+    - {fileID: 2800000, guid: 349059e80eea7a9459457e5749f18f3f, type: 3}
+    - {fileID: 2100000, guid: bdeda5a5d680d754e9e59e989829ded7, type: 2}
+    - {fileID: 2100000, guid: c448ef9d1fa5e39468c310bcabcf1e98, type: 2}
+    - {fileID: 2800000, guid: 345dd35a368c02b4a8b7f92971407e03, type: 3}
+    - {fileID: 2100000, guid: e65cb920a27de7e458cdef1b86dc1b5a, type: 2}
   prefabs: []
 --- !u!114 &241293077
 MonoBehaviour:
@@ -1524,8 +1536,9 @@ MonoBehaviour:
     and is automatically added to your scene when you enter Play mode.
 
 
-    To stop this from automatically being added to your scene, go to ''Window > Easy
-    Save 3 > Settings'' and deselect the ''Auto Add Manager to Scene'' checkbox.'
+    To stop
+    this from automatically being added to your scene, go to ''Window > Easy Save
+    3 > Settings'' and deselect the ''Auto Add Manager to Scene'' checkbox.'
 --- !u!4 &241293078
 Transform:
   m_ObjectHideFlags: 0
@@ -1586,6 +1599,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1632,7 +1646,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &277141307
 Transform:
@@ -1665,7 +1679,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &300154946
 Transform:
@@ -1708,6 +1722,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1754,7 +1769,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &312541879
 Transform:
@@ -1863,6 +1878,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.7176471}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1891,16 +1907,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 312541879}
     m_Modifications:
-    - target: {fileID: 3247860878122196552, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
-        type: 3}
-      propertyPath: m_Name
-      value: Z+ Wall
-      objectReference: {fileID: 0}
     - target: {fileID: 2770979521320186486, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f7a3aea144ebc8a4380ef4e041322804, type: 2}
+    - target: {fileID: 3247860878122196552, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
+        type: 3}
+      propertyPath: m_Name
+      value: Z+ Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247860878122196552, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1915,6 +1951,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
         type: 3}
@@ -1933,16 +1974,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
         type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
-        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
@@ -1955,16 +1986,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a0ca74b4d5fe904184a6e7ea4876066, type: 3}
@@ -2012,7 +2033,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &363729250
 Transform:
@@ -2043,7 +2064,7 @@ GameObject:
   m_TagString: In
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &381026408
 Transform:
@@ -2089,7 +2110,7 @@ GameObject:
   m_TagString: Out
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &384985975
 Transform:
@@ -2132,6 +2153,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2269,7 +2291,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &420868349
 Transform:
@@ -2312,6 +2334,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2361,7 +2384,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &430016152
 Transform:
@@ -2404,6 +2427,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2451,7 +2475,7 @@ GameObject:
   m_TagString: Out
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &466069977
 Transform:
@@ -2494,7 +2518,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &469661558
 Transform:
@@ -2521,16 +2545,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 312541879}
     m_Modifications:
+    - target: {fileID: 2770979521320186486, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e65cb920a27de7e458cdef1b86dc1b5a, type: 2}
     - target: {fileID: 3247860878122196552, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
         type: 3}
       propertyPath: m_Name
       value: X+ Wall
       objectReference: {fileID: 0}
-    - target: {fileID: 2770979521320186486, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
+    - target: {fileID: 3247860878122196552, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 768c8bfd04891c44daf7de792c8634c1, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2545,6 +2589,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
         type: 3}
@@ -2563,16 +2612,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
         type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
-        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
@@ -2585,16 +2624,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a0ca74b4d5fe904184a6e7ea4876066, type: 3}
@@ -2642,7 +2671,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &472609806
 Transform:
@@ -2837,7 +2866,7 @@ MonoBehaviour:
   _scaleStickRange: 1
   _stickBounds: 0
   _axesToUse: 0
-  _snapDirections: 16
+  _snapDirections: 8
   _snapStickToTouch: 1
   _centerStickOnRelease: 1
   _axis2D:
@@ -2963,7 +2992,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &489847216
 Transform:
@@ -3006,6 +3035,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3052,7 +3082,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &499568364
 Transform:
@@ -3181,7 +3211,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &517215694
 Transform:
@@ -3281,6 +3311,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.7764706}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3317,7 +3348,7 @@ GameObject:
   m_TagString: Out
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &567759364
 Transform:
@@ -3398,6 +3429,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3512,6 +3544,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.7176471}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3786,6 +3819,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3851,7 +3885,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &621885881
 Transform:
@@ -3877,9 +3911,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &621885883
 MeshRenderer:
@@ -3895,6 +3929,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3979,6 +4014,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4061,7 +4097,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &675302853
 Transform:
@@ -4091,7 +4127,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &679660993
 Transform:
@@ -4124,7 +4160,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &688417665
 Transform:
@@ -4150,9 +4186,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &688417667
 MeshRenderer:
@@ -4168,6 +4204,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4509,6 +4546,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4691,6 +4729,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4726,7 +4765,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &808926342
 Transform:
@@ -4968,6 +5007,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5031,7 +5071,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &832887999
 Transform:
@@ -5074,6 +5114,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5113,16 +5154,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 312541879}
     m_Modifications:
-    - target: {fileID: 3247860878122196552, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
-        type: 3}
-      propertyPath: m_Name
-      value: Z- Wall
-      objectReference: {fileID: 0}
     - target: {fileID: 2770979521320186486, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f7a3aea144ebc8a4380ef4e041322804, type: 2}
+    - target: {fileID: 3247860878122196552, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
+        type: 3}
+      propertyPath: m_Name
+      value: Z- Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247860878122196552, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5137,6 +5198,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
         type: 3}
@@ -5155,16 +5221,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
         type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
-        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
@@ -5177,16 +5233,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a0ca74b4d5fe904184a6e7ea4876066, type: 3}
@@ -5234,7 +5280,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &842736652
 Transform:
@@ -5457,7 +5503,7 @@ GameObject:
   m_TagString: Out
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &893025133
 Transform:
@@ -5500,6 +5546,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5546,7 +5593,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &893381393
 Transform:
@@ -5651,6 +5698,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5690,7 +5738,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &952058515
 Transform:
@@ -5799,6 +5847,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5841,7 +5890,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &974718694
 Transform:
@@ -5867,9 +5916,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &974718696
 MeshRenderer:
@@ -5885,6 +5934,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5931,7 +5981,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &986095456
 Transform:
@@ -5968,7 +6018,7 @@ GameObject:
   m_TagString: Out
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1003140442
 Transform:
@@ -6011,6 +6061,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6057,7 +6108,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1028406573
 Transform:
@@ -6087,7 +6138,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1033100696
 Transform:
@@ -6117,7 +6168,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1053287411
 Transform:
@@ -6346,7 +6397,7 @@ GameObject:
   m_TagString: Out
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1116823901
 Transform:
@@ -6427,6 +6478,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6469,7 +6521,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1128313456
 Transform:
@@ -6512,6 +6564,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6633,6 +6686,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.7176471}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6669,7 +6723,7 @@ GameObject:
   m_TagString: Out
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1148765242
 Transform:
@@ -6744,6 +6798,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6790,7 +6845,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1162479645
 Transform:
@@ -6820,7 +6875,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1176590821
 Transform:
@@ -6859,7 +6914,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1179939428
 Transform:
@@ -6919,7 +6974,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1191638983
 Transform:
@@ -6949,7 +7004,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1195923086
 Transform:
@@ -6984,7 +7039,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1199005844
 Transform:
@@ -7027,6 +7082,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7111,6 +7167,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.7764706}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -7149,7 +7206,7 @@ GameObject:
   m_TagString: Out
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1219846430
 Transform:
@@ -7192,6 +7249,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7328,7 +7386,7 @@ GameObject:
   m_TagString: Out
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1272789018
 Transform:
@@ -7371,6 +7429,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7417,7 +7476,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1285327002
 Transform:
@@ -7448,7 +7507,7 @@ GameObject:
   m_TagString: Out
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1313660904
 Transform:
@@ -7491,7 +7550,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1350026227
 Transform:
@@ -7528,7 +7587,7 @@ GameObject:
   m_TagString: Out
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1354801854
 Transform:
@@ -7571,6 +7630,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7620,7 +7680,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1357359865
 Transform:
@@ -7663,6 +7723,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7776,7 +7837,7 @@ GameObject:
   m_TagString: In2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1381205822
 Transform:
@@ -7822,7 +7883,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1384086393
 Transform:
@@ -7865,6 +7926,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7965,7 +8027,7 @@ GameObject:
   m_TagString: Out
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1396249675
 Transform:
@@ -8008,6 +8070,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8071,12 +8134,13 @@ TrailRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424783891}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8101,7 +8165,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.3
+  m_Time: 0.1
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.75
@@ -8217,6 +8281,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8281,7 +8346,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1426436312
 Transform:
@@ -8318,7 +8383,7 @@ GameObject:
   m_TagString: Out
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1433812190
 Transform:
@@ -8361,6 +8426,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8445,6 +8511,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -8556,7 +8623,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1454784003
 Transform:
@@ -8582,9 +8649,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1454784005
 MeshRenderer:
@@ -8600,6 +8667,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8786,7 +8854,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1477985702
 Transform:
@@ -8816,7 +8884,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1479570439
 Transform:
@@ -8851,7 +8919,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1497866631
 Transform:
@@ -8894,6 +8962,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8943,7 +9012,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1514985923
 Transform:
@@ -8986,6 +9055,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9035,7 +9105,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1548059460
 Transform:
@@ -9078,6 +9148,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9199,6 +9270,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -9238,7 +9310,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1574108027
 Transform:
@@ -9268,7 +9340,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1608571722
 Transform:
@@ -9301,16 +9373,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 312541879}
     m_Modifications:
+    - target: {fileID: 2770979521320186486, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e65cb920a27de7e458cdef1b86dc1b5a, type: 2}
     - target: {fileID: 3247860878122196552, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
         type: 3}
       propertyPath: m_Name
       value: X- Wall
       objectReference: {fileID: 0}
-    - target: {fileID: 2770979521320186486, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
+    - target: {fileID: 3247860878122196552, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 768c8bfd04891c44daf7de792c8634c1, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9324,6 +9416,11 @@ PrefabInstance:
     - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
         type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
+        type: 3}
+      propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
@@ -9343,16 +9440,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
         type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
-        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
@@ -9365,16 +9452,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181068177883969785, guid: 8a0ca74b4d5fe904184a6e7ea4876066,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a0ca74b4d5fe904184a6e7ea4876066, type: 3}
@@ -9425,7 +9502,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!64 &1622220213
 MeshCollider:
@@ -9437,9 +9514,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1622220214
 MeshRenderer:
@@ -9455,6 +9532,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9526,7 +9604,7 @@ GameObject:
   m_TagString: Out
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1622380824
 Transform:
@@ -9572,7 +9650,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1668411719
 Transform:
@@ -9598,9 +9676,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1668411721
 MeshRenderer:
@@ -9616,6 +9694,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9662,7 +9741,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1681030658
 Transform:
@@ -9694,7 +9773,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1695440739
 Transform:
@@ -9873,6 +9952,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -9911,7 +9991,7 @@ GameObject:
   m_TagString: Out
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1735406056
 Transform:
@@ -9954,6 +10034,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10032,6 +10113,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10268,7 +10350,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1787917310
 Transform:
@@ -10457,6 +10539,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10571,7 +10654,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1845329386
 Transform:
@@ -10606,7 +10689,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1848827928
 Transform:
@@ -10649,6 +10732,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10808,7 +10892,7 @@ GameObject:
   m_TagString: Out
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1853656735
 Transform:
@@ -10851,6 +10935,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11103,6 +11188,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -11143,7 +11229,7 @@ GameObject:
   m_TagString: Out
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1973899814
 Transform:
@@ -11186,7 +11272,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1998043280
 Transform:
@@ -11221,7 +11307,7 @@ GameObject:
   m_TagString: Out
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2000103857
 Transform:
@@ -11264,6 +11350,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11310,7 +11397,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2002651938
 Transform:
@@ -11380,6 +11467,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.7764706}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -11518,7 +11606,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2034914189
 Transform:
@@ -11570,8 +11658,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036792496}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 1
+  m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
@@ -11653,7 +11742,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2038089715
 Transform:
@@ -11696,6 +11785,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11745,7 +11835,7 @@ GameObject:
   m_TagString: Out
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2094548135
 Transform:
@@ -11788,6 +11878,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11872,6 +11963,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.7764706}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -11908,6 +12000,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -12041,6 +12134,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []

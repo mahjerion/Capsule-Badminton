@@ -802,8 +802,8 @@ public class DubP2Move : MonoBehaviour
         if (strokeState == 0 && shuttle.position.y > 3.5f && currentShot == shotManager.drive)
         {
             racquetSound.clip = smashSound;
-            racquetSound.volume = 1f;
-            racquetSound.pitch = 0.9f;
+            racquetSound.volume = 1.1f;
+            racquetSound.pitch = 0.95f;
         }
         else if (strokeState == 0 && shuttle.position.y > 3.5f && currentShot == shotManager.drop)
         {
@@ -832,15 +832,15 @@ public class DubP2Move : MonoBehaviour
     {
         if (strokeState == 1)
         {
-            return 1.325f;
+            return 1.25f;
         }
         else if (strokeState == 2)
         {
-            return 1.75f;
+            return 1.5f;
         }
         else
         {
-            return 1f;
+            return 0.8f;
         }
     }
 

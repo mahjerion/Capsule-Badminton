@@ -910,7 +910,7 @@ public class Points : MonoBehaviour
         {
             // determines xp based on number of games, etc
             float baseXP = pointsToWin * gamesToWin + gamesPlayed * 2;
-            float modXP = (BotMovement.difficultyLevel + 1) * 0.5f * baseXP;
+            float modXP = (BotMovement.difficultyLevel + 1) * 0.75f * baseXP;
             // EXP statements. If you win you get exp, if you lose you get 25% of exp
             if (redWonLastGame == true)
             {
