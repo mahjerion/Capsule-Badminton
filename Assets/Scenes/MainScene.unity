@@ -4887,7 +4887,7 @@ MonoBehaviour:
   _scaleStickRange: 1
   _stickBounds: 0
   _axesToUse: 0
-  _snapDirections: 8
+  _snapDirections: 0
   _snapStickToTouch: 1
   _centerStickOnRelease: 1
   _axis2D:
@@ -12520,7 +12520,7 @@ MonoBehaviour:
   _scaleStickRange: 1
   _stickBounds: 0
   _axesToUse: 0
-  _snapDirections: 8
+  _snapDirections: 0
   _snapStickToTouch: 1
   _centerStickOnRelease: 1
   _axis2D:
@@ -26997,7 +26997,7 @@ MonoBehaviour:
   _scaleStickRange: 1
   _stickBounds: 0
   _axesToUse: 0
-  _snapDirections: 8
+  _snapDirections: 0
   _snapStickToTouch: 1
   _centerStickOnRelease: 1
   _axis2D:

@@ -14,7 +14,9 @@ public class SinglePlayerCamera : MonoBehaviour
     public GameObject p1SPJoystick;
     public GameObject p1MPJoystick;
     public GameObject p2MPJoystick;
-    
+    public GameObject scoreBackground;
+    public GameObject infoBackground;
+
     // in game ui for mobile
     public RectTransform p1ScoreTrans;
     public RectTransform p2ScoreTrans;
@@ -36,6 +38,9 @@ public class SinglePlayerCamera : MonoBehaviour
         p1SPJoystick.SetActive(false);
         p1MPJoystick.SetActive(false);
         p2MPJoystick.SetActive(false);
+
+        scoreBackground.SetActive(true);
+        infoBackground.SetActive(true);
 
         // Gets components
         mainCam = GetComponent<Camera>();
@@ -68,6 +73,9 @@ public class SinglePlayerCamera : MonoBehaviour
             {
                 secondCamTrans.SetPositionAndRotation(new Vector3(-15f, 5f, 0f), Quaternion.Euler(15f, 90f, 0f));
             }
+
+            scoreBackground.SetActive(false);
+            infoBackground.SetActive(false);
 
             mainCam.rect = new Rect(0f, 0f, 0.5f, 1f);
             secondCam.SetActive(true);

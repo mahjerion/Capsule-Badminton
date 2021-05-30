@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.9.3.0] - 2021-05-XX
+## [0.9.3.0] - XXXX-XX-XX
 
 ### Updates
 - Performance improvements: changed most background objects to be static. Optimized sound compression.
@@ -18,7 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Increased base XP gain by 50%.
 - Added some more detailed explanations in the tutorial page.
 - Shorted the shuttle trail slightly.
-- MOBILE: joystick now has 8 directions rather than 16.
+- MOBILE: joystick now has no snap to direction.
 
 ### Fixes
 - Fixed typos in the "tutorial".
