@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Performance improvements: changed most background objects to be static. Optimized sound compression.
 - Reduced player inactionable frames when swinging slightly.
 - Changed the sound of the jump smash to be a little more "impactful".
+- Reduced the size of the hitboxes slightly.
 - Added walls and made court more visible in training mode.
 - Added translucent background behind score and information.
 - Increased base XP gain by 50%.

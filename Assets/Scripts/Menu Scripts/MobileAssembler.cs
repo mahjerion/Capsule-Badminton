@@ -9,7 +9,7 @@ public class MobileAssembler : MonoBehaviour
     private void Start()
     {
         // Variable for turning on or off mobile mode
-        SinglePlayerCamera.isMobile = true;
+        SinglePlayerCamera.isMobile = false;
 
         if (SinglePlayerCamera.isMobile == true)
         {
