@@ -394,13 +394,15 @@ public class PlayerMovement : MonoBehaviour
         {
             accMod /= 2;
         }
-        dir += new Vector3((shuttle.position.x - transform.position.x) * newInacc * accMod,
+        float newXInacc = newInacc * Random.Range(0.95f, 1.05f);
+        float newZInacc = newInacc * Random.Range(0.9f, 1.1f);
+        dir += new Vector3((shuttle.position.x - transform.position.x) * newXInacc * accMod,
             0,
-            (shuttle.position.z - transform.position.z) * newInacc * 2 * accMod);
+            (shuttle.position.z - transform.position.z) * newZInacc * 2 * accMod);
 
         // Public xz coords for bot to move to
-        xTargetHitTo = targets[targetX].position.x + ((shuttle.position.x - transform.position.x) * newInacc * accMod);
-        zTargetHitTo = targets[targetX].position.z + ((shuttle.position.z - transform.position.z) * newInacc * 2 * accMod);
+        xTargetHitTo = targets[targetX].position.x + ((shuttle.position.x - transform.position.x) * newXInacc * accMod);
+        zTargetHitTo = targets[targetX].position.z + ((shuttle.position.z - transform.position.z) * newZInacc * 2 * accMod);
         return dir;
     }
 
@@ -438,7 +440,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (shuttle.position.y > 3.5f && strokeState == 0 && currentShot == shotManager.clear)
         {
-            a -= 20f;
+            a -= 15f;
         }
         a *= Mathf.Deg2Rad;
         dir.y = dist * Mathf.Tan(a);
@@ -453,8 +455,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (currentShot == shotManager.drive && strokeState == 0 && shuttle.position.y > 3.5f)
         {
-            xJumpPower = 7f * newJump;
-            yJumpPower = 4.75f * newJump;
+            xJumpPower = 8f * newJump;
+            yJumpPower = 4.5f * newJump;
             zJumpPower = CrossCourtSmash();
             if (shuttle.position.x >= -0.65f)
             {
@@ -467,8 +469,8 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (currentShot == shotManager.drive && strokeState == 0)
         {
-            xJumpPower = 5.5f * newJump;
-            yJumpPower = 3.25f * newJump;
+            xJumpPower = 6f * newJump;
+            yJumpPower = 3f * newJump;
             zJumpPower = CrossCourtSmash();
             if (shuttle.position.x >= -0.65f)
             {
@@ -575,18 +577,23 @@ public class PlayerMovement : MonoBehaviour
     // Changes power based on position of shuttle in hitbox
     private float PowerDueToState()
     {
+        float power = 1;
+
         if (strokeState == 1)
         {
-            return 0.975f;
+            power -= 0.025f;
         }
         else if (strokeState == 2)
         {
-            return 0.95f;
+            power -= 0.05f;
         }
-        else
+
+        if (shuttle.position.x < transform.position.x)
         {
-            return 1.0f;
+            power *= 0.97f;
         }
+
+        return power;
     }
 
     // ------------------------------------------------------

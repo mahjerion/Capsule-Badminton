@@ -246,7 +246,7 @@ public class DubP1Move : MonoBehaviour
         EnergyFirstPress();
         playerAnim.Play("Ready Position");
         StartCoroutine("FrameWait");
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
         shortServe = false;
         longServe = false;
         clear = false;
@@ -407,13 +407,15 @@ public class DubP1Move : MonoBehaviour
         {
             accMod /= 2;
         }
-        dir += new Vector3((shuttle.position.x - transform.position.x) * newInacc * accMod,
+        float newXInacc = newInacc * Random.Range(0.975f, 1.025f);
+        float newZInacc = newInacc * Random.Range(0.95f, 1.05f);
+        dir += new Vector3((shuttle.position.x - transform.position.x) * newXInacc * accMod,
             0,
-            (shuttle.position.z - transform.position.z) * newInacc * 2 * accMod);
+            (shuttle.position.z - transform.position.z) * newZInacc * 2 * accMod);
 
         // Public xz coords for bot to move to
-        xTargetHitTo = targets[targetX].position.x + ((shuttle.position.x - transform.position.x) * newInacc * accMod);
-        zTargetHitTo = targets[targetX].position.z + ((shuttle.position.z - transform.position.z) * newInacc * 2 * accMod);
+        xTargetHitTo = targets[targetX].position.x + ((shuttle.position.x - transform.position.x) * newXInacc * accMod);
+        zTargetHitTo = targets[targetX].position.z + ((shuttle.position.z - transform.position.z) * newZInacc * 2 * accMod);
         return dir;
     }
 
@@ -451,7 +453,7 @@ public class DubP1Move : MonoBehaviour
         }
         else if (shuttle.position.y > 3.5f && strokeState == 0 && currentShot == shotManager.clear)
         {
-            a -= 20f;
+            a -= 15f;
         }
         a *= Mathf.Deg2Rad;
         dir.y = dist * Mathf.Tan(a);
@@ -594,18 +596,23 @@ public class DubP1Move : MonoBehaviour
     // Changes power based on position of shuttle in hitbox
     private float PowerDueToState()
     {
+        float power = 1;
+
         if (strokeState == 1)
         {
-            return 0.975f;
+            power -= 0.025f;
         }
         else if (strokeState == 2)
         {
-            return 0.95f;
+            power -= 0.05f;
         }
-        else
+
+        if (shuttle.position.x < transform.position.x)
         {
-            return 1.0f;
+            power *= 0.97f;
         }
+
+        return power;
     }
 
     // ------------------------------------------------------

@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.9.3.0] - XXXX-XX-XX
+## [0.9.3.0] - 2022-04-XX
 
 ### Updates
 - Performance improvements: changed most background objects to be static. Optimized sound compression.
@@ -16,11 +16,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Reduced the size of the hitboxes slightly.
 - Added walls and made court more visible in training mode.
 - Added translucent background behind score and information.
+- Made the net narrower, reducing chance of the shuttle "rolling" on the top.
 - Increased base XP gain by 50%.
 - Added some more detailed explanations in the tutorial page.
 - Shorted the shuttle trail slightly.
+- Removed "online" buttons.
+- Added some variability (randomized) to shots that are further away from the player. Variability is intensified along the left-right axis.
+- Shots are now weaker when the shuttle is behind the player (-3%).
+- Smashes are now less steep in singles games.
+- Bots no longer jump when below 33% energy.
+- In doubles, input buffer time has been halved compared to singles.
+- Cleaned up the main menu a bit.
+- Added a real pause menu that actually pauses the game.
 - MOBILE: joystick now has no snap to direction.
+- MOBILE: improved touch control ergonomics.
 
 ### Fixes
 - Fixed typos in the "tutorial".
 - Fixed the shuttle trail teleporting everywhere.
+- Fixed a bug where getting over enough exp to level twice was only leveling once.
+- Fixed a bug where yellow in doubles was not moving to the correct locations.

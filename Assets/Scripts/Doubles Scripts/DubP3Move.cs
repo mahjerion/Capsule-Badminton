@@ -327,7 +327,7 @@ public class DubP3Move : MonoBehaviour
         EnergyFirstPress();
         playerAnim.Play("Ready Position");
         StartCoroutine("FrameWait");
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
         shortServe = false;
         longServe = false;
         clear = false;
@@ -514,13 +514,15 @@ public class DubP3Move : MonoBehaviour
         {
             accMod /= 2;
         }
-        dir += new Vector3((shuttle.position.x - transform.position.x) * newInacc * accMod,
+        float newXInacc = newInacc * Random.Range(0.975f, 1.025f);
+        float newZInacc = newInacc * Random.Range(0.95f, 1.05f);
+        dir += new Vector3((shuttle.position.x - transform.position.x) * newXInacc * accMod,
             0,
-            (shuttle.position.z - transform.position.z) * newInacc * 2 * accMod);
+            (shuttle.position.z - transform.position.z) * newZInacc * 2 * accMod);
 
         // Public xz coords for bot to move to
-        DubP1Move.xTargetHitTo = targets[targetX].position.x + ((shuttle.position.x - transform.position.x) * newInacc * accMod);
-        DubP1Move.zTargetHitTo = targets[targetX].position.z + ((shuttle.position.z - transform.position.z) * newInacc * 2 * accMod);
+        DubP1Move.xTargetHitTo = targets[targetX].position.x + ((shuttle.position.x - transform.position.x) * newXInacc * accMod);
+        DubP1Move.zTargetHitTo = targets[targetX].position.z + ((shuttle.position.z - transform.position.z) * newZInacc * 2 * accMod);
         return dir;
     }
 
@@ -558,7 +560,7 @@ public class DubP3Move : MonoBehaviour
         }
         else if (shuttle.position.y > 3.5f && strokeState == 0 && currentShot == shotManager.clear)
         {
-            a -= 20f;
+            a -= 15f;
         }
         a *= Mathf.Deg2Rad;
         dir.y = dist * Mathf.Tan(a);
@@ -702,18 +704,23 @@ public class DubP3Move : MonoBehaviour
     // Changes power based on position of shuttle in hitbox
     private float PowerDueToState()
     {
+        float power = 1;
+
         if (strokeState == 1)
         {
-            return 0.975f;
+            power -= 0.025f;
         }
         else if (strokeState == 2)
         {
-            return 0.95f;
+            power -= 0.05f;
         }
-        else
+
+        if (shuttle.position.x < transform.position.x)
         {
-            return 1.0f;
+            power *= 0.97f;
         }
+
+        return power;
     }
 
     // ------------------------------------------------------
@@ -944,7 +951,7 @@ public class DubP3Move : MonoBehaviour
                 StartCoroutine("DelayBotReaction");
                 if (delayStarted == true)
                 {
-                    if (DubP2Move.xTargetHitTo >= -3)
+                    if (DubP2Move.xTargetHitTo <= 3)
                     {
                         moveDirection = new Vector3(DubP2Move.xTargetHitTo * 0.85f - transform.position.x,
                             0, DubP2Move.zTargetHitTo * 0.95f - transform.position.z);
@@ -952,7 +959,7 @@ public class DubP3Move : MonoBehaviour
                     else
                     {
                         moveDirection = new Vector3(DubP2Move.xTargetHitTo * 0.8f - transform.position.x,
-                            0, DubP2Move.zTargetHitTo * 0.9f - transform.position.z);
+                            0, DubP2Move.zTargetHitTo * 0.875f - transform.position.z);
                     }
                 }
                 else
@@ -984,7 +991,7 @@ public class DubP3Move : MonoBehaviour
                 && Mathf.Abs(shuttle.position.y - transform.position.y) >= 3.5f
                 && Mathf.Abs(shuttle.position.z - transform.position.z) <= (0.5f + PlayerMovement.playerLevel / 10)
                 && Mathf.Abs(shuttle.position.y - transform.position.y) <= 4.5f
-                && botJumpChanceRolled == false)
+                && botJumpChanceRolled == false && energyCurr > 33f)
             {
                 botJumpChanceRolled = true;
                 int randomJumpChance = Random.Range(0, 5);

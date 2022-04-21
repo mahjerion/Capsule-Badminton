@@ -247,7 +247,7 @@ public class PlayerMovementTrain : MonoBehaviour
         }
         else if (shuttleTrans.position.y > 3.5f && strokeState == 0 && currentShot == shotManager.clear)
         {
-            a -= 20f;
+            a -= 15f;
         }
         a *= Mathf.Deg2Rad;
         dir.y = dist * Mathf.Tan(a);
@@ -262,8 +262,8 @@ public class PlayerMovementTrain : MonoBehaviour
 
         if (currentShot == shotManager.drive && strokeState == 0 && shuttleTrans.position.y > 3.5f)
         {
-            xJumpPower = 7f * extraJumpPower;
-            yJumpPower = 4.75f * extraJumpPower;
+            xJumpPower = 8f * extraJumpPower;
+            yJumpPower = 4.5f * extraJumpPower;
             zJumpPower = CrossCourtSmash();
             if (shuttleTrans.position.x >= -0.65f)
             {
@@ -276,8 +276,8 @@ public class PlayerMovementTrain : MonoBehaviour
         }
         else if (currentShot == shotManager.drive && strokeState == 0)
         {
-            xJumpPower = 5.5f * extraJumpPower;
-            yJumpPower = 3.25f * extraJumpPower;
+            xJumpPower = 6f * extraJumpPower;
+            yJumpPower = 3f * extraJumpPower;
             zJumpPower = CrossCourtSmash();
             if (shuttleTrans.position.x >= -0.65f)
             {
@@ -471,9 +471,11 @@ public class PlayerMovementTrain : MonoBehaviour
         {
             accMod /= 2;
         }
-        dir += new Vector3((shuttleTrans.position.x - transform.position.x) * inaccuracy * accMod,
+        float newXInacc = inaccuracy * Random.Range(0.95f, 1.05f);
+        float newZInacc = inaccuracy * Random.Range(0.9f, 1.1f);
+        dir += new Vector3((shuttleTrans.position.x - transform.position.x) * newXInacc * accMod,
             0,
-            (shuttleTrans.position.z - transform.position.z) * inaccuracy * 2 * accMod);
+            (shuttleTrans.position.z - transform.position.z) * newZInacc * 2 * accMod);
 
         // Public xz coords for bot to move to
         return dir;
@@ -482,18 +484,23 @@ public class PlayerMovementTrain : MonoBehaviour
     // Changes power based on position of shuttle in hitbox
     private float PowerDueToState()
     {
+        float power = 1;
+
         if (strokeState == 1)
         {
-            return 0.975f;
+            power -= 0.025f;
         }
         else if (strokeState == 2)
         {
-            return 0.95f;
+            power -= 0.05f;
         }
-        else
+
+        if (shuttleTrans.position.x < transform.position.x)
         {
-            return 1.0f;
+            power *= 0.97f;
         }
+
+        return power;
     }
     
     private void PlayAnimation()
