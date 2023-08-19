@@ -104,9 +104,21 @@ public class DubP1Move : MonoBehaviour
     bool clear;
     bool detectHit;
 
+    // energy frame rate fix
+    float frameRate;
+
     // Start is called before the first frame update
     void Start()
     {
+        if (ES3.KeyExists("frameRate"))
+        {
+            frameRate = ES3.Load<int>("frameRate");
+        }
+        else
+        {
+            frameRate = 60;
+        }
+
         // rewired init
         playerD = ReInput.players.GetPlayer(0);
         
@@ -813,11 +825,11 @@ public class DubP1Move : MonoBehaviour
     {
         if (strokeState == 0 && currentShot == shotManager.drive)
         {
-            energyCurr = Mathf.Max(0, energyCurr - 12);
+            energyCurr = Mathf.Max(0, energyCurr - 10);
         }
         else
         {
-            energyCurr = Mathf.Max(0, energyCurr - 6);
+            energyCurr = Mathf.Max(0, energyCurr - 5);
         }
     }
 
@@ -830,7 +842,7 @@ public class DubP1Move : MonoBehaviour
     {
         if (energyCurr < energyMax)
         {
-            energyCurr += (0.05f * energyRegen);
+            energyCurr += Mathf.Max((0.05f * energyRegen), (0.05f * energyRegen * (60f / frameRate)));
         }
     }
 

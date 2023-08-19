@@ -53,6 +53,13 @@ public class SinglePlayerCamera : MonoBehaviour
             secondCamTrans.SetPositionAndRotation(new Vector3(0f, 7f, -9f), Quaternion.Euler(25f, 0f, 0f));
             secondCamCamera.fieldOfView = 90f;
         }
+        else if (!Points.doublesOn)
+        {
+            mainCamTrans.SetPositionAndRotation(new Vector3(-7.5f, 2.5f, 0f), Quaternion.Euler(10f, 90f, 0f));
+            mainCam.fieldOfView = 60f;
+            secondCamTrans.SetPositionAndRotation(new Vector3(7.5f, 2.5f, 0f), Quaternion.Euler(10f, 270f, 0f));
+            secondCamCamera.fieldOfView = 60f;
+        }
         else
         {
             mainCamTrans.SetPositionAndRotation(new Vector3(-15f, 5f, 0f), Quaternion.Euler(15f, 90f, 0f));
@@ -61,12 +68,14 @@ public class SinglePlayerCamera : MonoBehaviour
             secondCamCamera.fieldOfView = 60f;
         }
 
-        if (twoPlayerCam == false)
+        if (twoPlayerCam == false || (altCamera && !isMobile))
         {
             mainCam.rect = new Rect(0f, 0f, 1f, 1f);
             secondCam.SetActive(false);
         }
 
+        print("isMob + twoPcam" + isMobile + " + " + twoPlayerCam);
+        print("dubs" + Points.doublesOn);
         if (isMobile && twoPlayerCam)
         {
             if (Points.doublesOn && altCamera == false)

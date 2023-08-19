@@ -100,9 +100,23 @@ public class PlayerMovement : MonoBehaviour
     bool clear;
     bool detectHit;
 
+    // energy frame rate fix
+    float frameRate;
+
     // Start is called before the first frame update
     void Start()
     {
+        if (ES3.KeyExists("frameRate"))
+        {
+            frameRate = ES3.Load<int>("frameRate");
+        }
+        else
+        {
+            frameRate = 60;
+        }
+
+        //print("frameRate = " + frameRate);
+
         player = ReInput.players.GetPlayer(0);
 
         // Initialize and get component for players
@@ -742,11 +756,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (strokeState == 0 && currentShot == shotManager.drive)
         {
-            energyCurr = Mathf.Max(0, energyCurr - 12);
+            energyCurr = Mathf.Max(0, energyCurr - 14);
         }
         else
         {
-            energyCurr = Mathf.Max(0, energyCurr - 6);
+            energyCurr = Mathf.Max(0, energyCurr - 7);
         }
     }
 
@@ -759,7 +773,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (energyCurr < energyMax)
         {
-            energyCurr += (0.05f * energyRegen);
+            energyCurr += Mathf.Max((0.05f * energyRegen), (0.05f * energyRegen * (60f / frameRate)));
         }
     }
 

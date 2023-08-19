@@ -921,8 +921,8 @@ public class Points : MonoBehaviour
                 PlayerMovement.playerEXP += modXP * 0.25f;
             }
             
-            // Checks to see if player exp is greater than required to level up, max level is 30
-            while (PlayerMovement.playerEXP >= PlayerEXP(PlayerMovement.playerLevel) && PlayerMovement.playerLevel < 30)
+            // Checks to see if player exp is greater than required to level up, max level is 35
+            while (PlayerMovement.playerEXP >= PlayerEXP(PlayerMovement.playerLevel) && PlayerMovement.playerLevel < 35)
             {
                 PlayerMovement.playerEXP -= PlayerEXP(PlayerMovement.playerLevel);
                 PlayerMovement.playerLevel++;

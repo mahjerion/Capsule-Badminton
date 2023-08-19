@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.9.3.0] - 2022-04-XX
+## [0.9.3.1] - 2023-XX-XX
 
 ### Updates
 - Performance improvements: changed most background objects to be static. Optimized sound compression.
@@ -28,6 +28,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - In doubles, input buffer time has been halved compared to singles.
 - Cleaned up the main menu a bit.
 - Added a real pause menu that actually pauses the game.
+- Improved visibility of shuttle by darkening the courts and the background.
+- Reduced bot reaction speed very slightly.
+- Added a frame rate option.
+- Singles camera has been improved - it now moves with the player and gives a better FOV.
+- Singles energy consumption per hit has increased from 12 -> 14 for smashes and 6 -> 7 for other shots.
+- Doubles energy consumption per hit has decreased from 12 -> 10 for smashes and 6 -> 5 for other shots.
 - MOBILE: joystick now has no snap to direction.
 - MOBILE: improved touch control ergonomics.
 
@@ -36,3 +42,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed the shuttle trail teleporting everywhere.
 - Fixed a bug where getting over enough exp to level twice was only leveling once.
 - Fixed a bug where yellow in doubles was not moving to the correct locations.
+- Fixed an issue where having the camera as side view and two players on PC mode was playing as split screen.
+- Fixed the camera in 4P.
+- 2P doubles no longer splitscreens on PC.
+
+
+- need to fix energy in 90-120 fps.

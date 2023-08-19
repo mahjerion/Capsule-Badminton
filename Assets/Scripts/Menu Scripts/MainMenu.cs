@@ -10,8 +10,18 @@ public class MainMenu : MonoBehaviour
     public GameObject backSceneObject;
 
     private void Awake()
-    {        
+    {
         // init for some saved options
+        if (ES3.KeyExists("frameRate"))
+        {
+            FrameRateOptionMenu.frameMenu = ES3.Load<int>("frameRate");
+            Application.targetFrameRate = FrameRateOptionMenu.frameMenu;
+        }
+        else
+        {
+            FrameRateOptionMenu.frameMenu = 60;
+            Application.targetFrameRate = 60;
+        }
         if (ES3.KeyExists("musicOn"))
         {
             MusicOptionMenu.menuMusic = ES3.Load<bool>("musicOn");
@@ -182,7 +192,13 @@ public class MainMenu : MonoBehaviour
         Points.doublesOn = true;
         BotMovement.amIABot = true;
         SinglePlayerCamera.coopBots = true;
-        SinglePlayerCamera.twoPlayerCam = true;
+        if (!SinglePlayerCamera.isMobile)
+        {
+            SinglePlayerCamera.twoPlayerCam = false;
+        } else
+        {
+            SinglePlayerCamera.twoPlayerCam = true;
+        }
     }
 
     public void PlayDoublesGame()
@@ -191,7 +207,7 @@ public class MainMenu : MonoBehaviour
         Points.doublesOn = true;
         BotMovement.amIABot = false;
         SinglePlayerCamera.coopBots = false;
-        SinglePlayerCamera.twoPlayerCam = false;
+        SinglePlayerCamera.twoPlayerCam = true;
     }
 
     public void TrainingRacquet()

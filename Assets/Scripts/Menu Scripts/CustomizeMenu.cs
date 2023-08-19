@@ -18,10 +18,10 @@ public class CustomizeMenu : MonoBehaviour
         levelText.text = "Level: " + PlayerMovement.playerLevel;
         expText.text = "XP: " + Mathf.Round((PlayerMovement.playerEXP / (5 * Mathf.Pow(2.5f, Mathf.Sqrt(PlayerMovement.playerLevel - 1))) * 100)) + "%";
         pointsText.text = "Points: " + PlayerMovement.playerPoints;
-        spdText.text = "Speed: +" + PlayerMovement.speedBoost + "%";
+        spdText.text = "Movement: +" + PlayerMovement.speedBoost + "%";
         accText.text = "Accuracy: +" + (PlayerMovement.accuracyBoost * 2) + "%";
         pwrText.text = "Power: +" + PlayerMovement.smashPowerBoost + "%";
-        nrgText.text = "Energy Regen: +" + PlayerMovement.energyBoost + "%";
+        nrgText.text = "Stamina: +" + PlayerMovement.energyBoost + "%";
     }
 
     public void IncreaseSpeed()
@@ -74,10 +74,10 @@ public class CustomizeMenu : MonoBehaviour
 
     private void PointsUpdate()
     {
-        spdText.text = "Speed: +" + PlayerMovement.speedBoost + "%";
+        spdText.text = "Movement: +" + PlayerMovement.speedBoost + "%";
         accText.text = "Accuracy: +" + (PlayerMovement.accuracyBoost * 2) + "%";
         pwrText.text = "Power: +" + PlayerMovement.smashPowerBoost + "%";
-        nrgText.text = "Energy Regen: +" + PlayerMovement.energyBoost + "%";
+        nrgText.text = "Stamina: +" + PlayerMovement.energyBoost + "%";
         pointsText.text = "Points: " + PlayerMovement.playerPoints;
     }
     public void DropdownIndexRacquetType (int index)

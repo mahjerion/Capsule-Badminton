@@ -92,17 +92,29 @@ public class BotMovement : MonoBehaviour
     bool botShot;
     bool detectHit;
 
+    // energy frame rate fix
+    float frameRate;
+
     // Start is called before the first frame update
     void Start()
     {
+        if (ES3.KeyExists("frameRate"))
+        {
+            frameRate = ES3.Load<int>("frameRate");
+        }
+        else
+        {
+            frameRate = 60;
+        }
+
         //if (NetworkController.networkMode)
         //{
         //    player = ReInput.players.GetPlayer(0);
         //}
         //else
         //{
-            // rewired init
-            player = ReInput.players.GetPlayer(1);
+        // rewired init
+        player = ReInput.players.GetPlayer(1);
         //}
 
         // Initialize and get component for players
@@ -858,7 +870,7 @@ public class BotMovement : MonoBehaviour
         speed = Mathf.Min(2.5f + 0.25f * levelOfBot);
         inaccuracy = Mathf.Max(0.5f - 0.1f * levelOfBot, 0.05f);
         extraJumpPower = Mathf.Min(1f + 0.1f * levelOfBot, 1.5f);
-        botDelaySpeed = Mathf.Min(0.07f * levelOfBot, 0.4f);
+        botDelaySpeed = Mathf.Min(0.08f * levelOfBot, 0.5f);
         botSwingSpeed = 0.05f * levelOfBot;
         energyRegen = Mathf.Min (1 + (0.1f * levelOfBot), 1.5f);
     }
@@ -987,11 +999,11 @@ public class BotMovement : MonoBehaviour
     {
         if (strokeState == 0 && currentShot == shotManager.drive)
         {
-            energyCurr = Mathf.Max(0, energyCurr - 12);
+            energyCurr = Mathf.Max(0, energyCurr - 14);
         }
         else
         {
-            energyCurr = Mathf.Max(0, energyCurr - 6);
+            energyCurr = Mathf.Max(0, energyCurr - 7);
         }
     }
 
@@ -1004,7 +1016,7 @@ public class BotMovement : MonoBehaviour
     {
         if (energyCurr < energyMax)
         {
-            energyCurr += (0.05f * energyRegen);
+            energyCurr += Mathf.Max((0.05f * energyRegen), (0.05f * energyRegen * (60f / frameRate)));
         }
     }
 
@@ -1063,7 +1075,7 @@ public class BotMovement : MonoBehaviour
     {
         if (delayStarted == false)
         {
-            yield return new WaitForSeconds(0.4f - Random.Range(0f, botDelaySpeed));
+            yield return new WaitForSeconds(0.5f - Random.Range(0f, botDelaySpeed));
             delayStarted = true;
         }
         else

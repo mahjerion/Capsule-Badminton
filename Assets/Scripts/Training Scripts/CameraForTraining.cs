@@ -18,7 +18,7 @@ public class CameraForTraining : MonoBehaviour
         }
         else
         {
-            mainCamTrans.SetPositionAndRotation(new Vector3(-15f, 5f, 0f), Quaternion.Euler(15f, 90f, 0f));
+            mainCamTrans.SetPositionAndRotation(new Vector3(-15f, 5f, 0f), Quaternion.Euler(10f, 90f, 0f));
         }
 
         if (SinglePlayerCamera.isMobile == true)

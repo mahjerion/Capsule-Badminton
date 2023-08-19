@@ -112,9 +112,20 @@ public class DubP4Move : MonoBehaviour
     bool botShot;
     bool detectHit;
 
+    // energy frame rate fix
+    float frameRate;
+
     // Start is called before the first frame update
     void Start()
     {
+        if (ES3.KeyExists("frameRate"))
+        {
+            frameRate = ES3.Load<int>("frameRate");
+        }
+        else
+        {
+            frameRate = 60;
+        }
         playerD = ReInput.players.GetPlayer(3);
 
         // Initialize and get component for players
@@ -853,7 +864,7 @@ public class DubP4Move : MonoBehaviour
         inaccuracy = Mathf.Max(0.5f - 0.15f * levelOfBot, 0.05f);
         extraJumpPower = Mathf.Min(1f + 0.075f * levelOfBot, 1.5f);
         swingSpeed = 0.06f * levelOfBot;
-        botDelaySpeed = Mathf.Min(0.07f * levelOfBot, 0.4f);
+        botDelaySpeed = Mathf.Min(0.06f * levelOfBot, 0.4f);
         energyRegen = Mathf.Min(1 + (0.1f * levelOfBot), 1.5f);
     }
 
@@ -1067,11 +1078,11 @@ public class DubP4Move : MonoBehaviour
     {
         if (strokeState == 0 && currentShot == shotManager.drive)
         {
-            energyCurr = Mathf.Max(0, energyCurr - 12);
+            energyCurr = Mathf.Max(0, energyCurr - 10);
         }
         else
         {
-            energyCurr = Mathf.Max(0, energyCurr - 6);
+            energyCurr = Mathf.Max(0, energyCurr - 5);
         }
     }
 
@@ -1084,7 +1095,7 @@ public class DubP4Move : MonoBehaviour
     {
         if (energyCurr < energyMax)
         {
-            energyCurr += (0.05f * energyRegen);
+            energyCurr += Mathf.Max((0.05f * energyRegen), (0.05f * energyRegen * (60f / frameRate)));
         }
     }
 
