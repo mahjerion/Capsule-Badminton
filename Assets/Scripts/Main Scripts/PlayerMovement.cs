@@ -77,6 +77,8 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource racquetSound;
     public AudioClip liftSound;
     public AudioClip smashSound;
+    public AudioClip netSound;
+    public AudioClip clearSound;
 
     // Allow movement bool where if it's true they can do stuff. Is set to false whenever they
     // hit a key
@@ -642,28 +644,28 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (playerType == 1)
         {
-            speed = 3f;
+            speed = 3.2f;
             inaccuracy = 0.4f;
             extraJumpPower = 1.4f;
             energyRegen = 1.25f;
         }
         else if (playerType == 2)
         {
-            speed = 3.3f;
+            speed = 3.5f;
             inaccuracy = 0.4f;
             extraJumpPower = 1.1f;
             energyRegen = 1.25f;
         }
         else if (playerType == 3)
         {
-            speed = 3f;
+            speed = 3.2f;
             inaccuracy = 0.1f;
             extraJumpPower = 1.1f;
             energyRegen = 1.25f;
         }
         else
         {
-            speed = 3.1f;
+            speed = 3.25f;
             inaccuracy = 0.3f;
             extraJumpPower = 1.15f;
             energyRegen = 1.25f;
@@ -699,33 +701,64 @@ public class PlayerMovement : MonoBehaviour
     // Audio function, plays sound depending on which shot was hit from what position
     private void RacquetSound()
     {
-        racquetSound.volume = 0.75f;
-        racquetSound.pitch = 1f;
-        if (strokeState == 0 && shuttle.position.y > 3.5f && currentShot == shotManager.drive)
+        racquetSound.volume = 1f;
+        racquetSound.pitch = Random.Range(0.9f, 1.1f);
+
+        if (currentShot == shotManager.shortServe)
         {
-            racquetSound.clip = smashSound;
-            racquetSound.volume = 1.1f;
-            racquetSound.pitch = 0.95f;
-        }
-        else if (strokeState == 0 && shuttle.position.y > 3.5f && currentShot == shotManager.drop)
-        {
-            racquetSound.clip = smashSound;
+            racquetSound.clip = netSound;
             racquetSound.volume = 0.9f;
-            racquetSound.pitch = 1.2f;
+            racquetSound.pitch += 0.1f;
         }
-        else if (strokeState <= 1 && currentShot == shotManager.drop || currentShot == shotManager.shortServe)
+        else if (currentShot == shotManager.longServe)
         {
             racquetSound.clip = liftSound;
-            racquetSound.volume = 0.9f;
-            racquetSound.pitch = 1.25f;
+            racquetSound.volume = 1.1f;
+            racquetSound.pitch += 0.1f;
         }
-        else if (strokeState <= 1 || (strokeState == 2 && currentShot == shotManager.clear) || currentShot == shotManager.longServe)
+        else if (strokeState == 0)
         {
-            racquetSound.clip = smashSound;
+            if (shuttle.position.y > 3.5f)
+            {
+                if (currentShot == shotManager.drive)
+                {
+                    racquetSound.clip = smashSound;
+                }
+                else if (currentShot == shotManager.drop)
+                {
+                    racquetSound.clip = netSound;
+                    racquetSound.volume = 1.1f;
+                }
+                else
+                {
+                    racquetSound.clip = clearSound;
+                }
+            }
+            else
+            {
+                if (currentShot == shotManager.drop)
+                {
+                    racquetSound.clip = netSound;
+                    racquetSound.volume = 0.95f;
+                }
+                else
+                {
+                    racquetSound.clip = clearSound;
+                }
+            }
         }
         else
         {
-            racquetSound.clip = liftSound;
+            if (currentShot == shotManager.drop)
+            {
+                racquetSound.clip = netSound;
+                racquetSound.volume = 0.9f;
+                racquetSound.pitch += 0.1f;
+            }
+            else
+            {
+                racquetSound.clip = liftSound;
+            }
         }
         racquetSound.Play();
     }
@@ -773,7 +806,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (energyCurr < energyMax)
         {
-            energyCurr += Mathf.Max((0.05f * energyRegen), (0.05f * energyRegen * (60f / frameRate)));
+            energyCurr += (0.05f * energyRegen * (60f / frameRate));
         }
     }
 

@@ -39,6 +39,8 @@ public class BackgroundBot2 : MonoBehaviour
     public AudioSource racquetSound;
     public AudioClip liftSound;
     public AudioClip smashSound;
+    public AudioClip netSound;
+    public AudioClip clearSound;
 
     // Bot Bools
     public static bool allowMovement;
@@ -415,33 +417,64 @@ public class BackgroundBot2 : MonoBehaviour
 
     private void RacquetSound()
     {
-        racquetSound.volume = 0.75f;
-        racquetSound.pitch = 1f;
-        if (strokeState == 0 && shuttle.position.y > 3.5f && currentShot == shotManager.drive)
+        racquetSound.volume = 1f;
+        racquetSound.pitch = Random.Range(0.9f, 1.1f);
+
+        if (currentShot == shotManager.shortServe)
         {
-            racquetSound.clip = smashSound;
-            racquetSound.volume = 1f;
-            racquetSound.pitch = 0.9f;
-        }
-        else if (strokeState == 0 && shuttle.position.y > 3.5f && currentShot == shotManager.drop)
-        {
-            racquetSound.clip = smashSound;
+            racquetSound.clip = netSound;
             racquetSound.volume = 0.9f;
-            racquetSound.pitch = 1.2f;
+            racquetSound.pitch += 0.1f;
         }
-        else if (strokeState <= 1 && currentShot == shotManager.drop || currentShot == shotManager.shortServe)
+        else if (currentShot == shotManager.longServe)
         {
             racquetSound.clip = liftSound;
-            racquetSound.volume = 0.9f;
-            racquetSound.pitch = 1.25f;
+            racquetSound.volume = 1.1f;
+            racquetSound.pitch += 0.1f;
         }
-        else if (strokeState <= 1 || (strokeState == 2 && currentShot == shotManager.clear) || currentShot == shotManager.longServe)
+        else if (strokeState == 0)
         {
-            racquetSound.clip = smashSound;
+            if (shuttle.position.y > 3.5f)
+            {
+                if (currentShot == shotManager.drive)
+                {
+                    racquetSound.clip = smashSound;
+                }
+                else if (currentShot == shotManager.drop)
+                {
+                    racquetSound.clip = netSound;
+                    racquetSound.volume = 1.1f;
+                }
+                else
+                {
+                    racquetSound.clip = clearSound;
+                }
+            }
+            else
+            {
+                if (currentShot == shotManager.drop)
+                {
+                    racquetSound.clip = netSound;
+                    racquetSound.volume = 0.95f;
+                }
+                else
+                {
+                    racquetSound.clip = clearSound;
+                }
+            }
         }
         else
         {
-            racquetSound.clip = liftSound;
+            if (currentShot == shotManager.drop)
+            {
+                racquetSound.clip = netSound;
+                racquetSound.volume = 0.9f;
+                racquetSound.pitch += 0.1f;
+            }
+            else
+            {
+                racquetSound.clip = liftSound;
+            }
         }
         racquetSound.Play();
     }
