@@ -869,9 +869,9 @@ public class BotMovement : MonoBehaviour
     // Adjusts difficulty of bot
     void BotDifficulty(int levelOfBot)
     {
-        speed = Mathf.Min(2.5f + 0.25f * levelOfBot);
+        speed = Mathf.Min(2.5f + 0.225f * levelOfBot);
         inaccuracy = Mathf.Max(0.5f - 0.1f * levelOfBot, 0.05f);
-        extraJumpPower = Mathf.Min(1f + 0.1f * levelOfBot, 1.5f);
+        extraJumpPower = Mathf.Min(1f + 0.08f * levelOfBot, 1.5f);
         botDelaySpeed = Mathf.Min(0.08f * levelOfBot, 0.5f);
         botSwingSpeed = 0.05f * levelOfBot;
         energyRegen = Mathf.Min (1 + (0.1f * levelOfBot), 1.5f);

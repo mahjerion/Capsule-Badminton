@@ -900,9 +900,9 @@ public class DubP3Move : MonoBehaviour
     // Adjusts difficulty of bot based on player level
     void BotDifficulty(int levelOfBot)
     {
-        speed = Mathf.Min(2.5f + 0.025f * levelOfBot);
+        speed = Mathf.Min(2.25f + 0.02f * levelOfBot);
         inaccuracy = Mathf.Max(0.5f - 0.01f * levelOfBot, 0.05f);
-        extraJumpPower = 1f + 0.02f * levelOfBot;
+        extraJumpPower = 1f + 0.015f * levelOfBot;
         swingSpeed = 0.005f * levelOfBot;
         botDelaySpeed = 0.01f * levelOfBot;
         energyRegen = Mathf.Min(1 + (0.1f * levelOfBot), 1.5f);
@@ -1003,8 +1003,8 @@ public class DubP3Move : MonoBehaviour
                     }
                     else
                     {
-                        moveDirection = new Vector3(DubP2Move.xTargetHitTo * 0.8f - transform.position.x,
-                            0, DubP2Move.zTargetHitTo * 0.875f - transform.position.z);
+                        moveDirection = new Vector3(DubP2Move.xTargetHitTo * 0.6f - transform.position.x,
+                            0, DubP2Move.zTargetHitTo * 0.8f - transform.position.z);
                     }
                 }
                 else

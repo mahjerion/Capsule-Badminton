@@ -902,11 +902,11 @@ public class DubP2Move : MonoBehaviour
     // this bot is stronger, uses a heavier racquet
     void BotDifficulty(int levelOfBot)
     {
-        speed = Mathf.Min(2.5f + 0.25f * levelOfBot);
+        speed = Mathf.Min(2.6f + 0.25f * levelOfBot);
         inaccuracy = Mathf.Max(0.5f - 0.1f * levelOfBot, 0.05f);
         extraJumpPower = Mathf.Min(1f + 0.15f * levelOfBot, 1.5f);
         swingSpeed = 0.05f * levelOfBot;
-        botDelaySpeed = Mathf.Min(0.07f * levelOfBot, 0.4f);
+        botDelaySpeed = Mathf.Min(0.06f * levelOfBot, 0.4f);
         energyRegen = Mathf.Min(1 + (0.1f * levelOfBot), 1.5f);
     }
 
@@ -1005,7 +1005,7 @@ public class DubP2Move : MonoBehaviour
                     }
                     else
                     {
-                        moveDirection = new Vector3(DubP1Move.xTargetHitTo * 0.8f - transform.position.x,
+                        moveDirection = new Vector3(DubP1Move.xTargetHitTo * 0.7f - transform.position.x,
                             0, DubP1Move.zTargetHitTo * 0.875f - transform.position.z);
                     }
                 }
